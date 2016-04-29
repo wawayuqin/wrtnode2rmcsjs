@@ -1,0 +1,14 @@
+rejected 1 configuration due to insufficient available bus power
+usb 2-1: no configuration chosen from 1 choice
+ 
+解决方法：
+你的USB设备需要的电量大于USB口所能提供的，据说 
+
+这实际上是你的USB设备不规范导致的(没有使用标准规定的最大电量），据说
+
+echo -n 1 > /sys/devices/101c0000.ehci/usb1/1-1/1-1.3/bConfigurationValue 
+这样就可以加载驱动了
+[  279.510000] usb 1-1.3: new config #1 exceeds power limit by 400mA
+[  279.800000] usb 1-1.3: set resolution quirk: cval->res = 384
+[  279.810000] uvcvideo: Found UVC 1.00 device HD Webcam C525 (046d:0826)
+[  279.830000] input: HD Webcam C525 as /devices/101c0000.ehci/usb1/1-1/1-1.3/1-1.3:1.2/input/input0
