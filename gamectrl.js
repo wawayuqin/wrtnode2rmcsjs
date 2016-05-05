@@ -1,7 +1,7 @@
 //var exec = require('child_process').exec; 
 //var cmdStr = 'sh /usr/bin/obotest1.sh';
-//var Car= require('carctrol');
-//car=new Car();
+var Car= require('./carctrol');
+car=new Car();
 //var car=new carctrol();
 //var offl='sh offl.sh';
 var mcs=require('mcsjs');
@@ -15,18 +15,18 @@ myapp.on('game001',function(data,time){
  // var value=+data;
  	if(data=='z|1')
  	{
- 		console.log('left');
+ 		car.turnLeft();
  	}
    if(data=='y|1')
  	{
- 		console.log('right');
+ 		car.turnRight();
  	}
  	if(data=='s|1')
  	{
- 		console.log('up');
+ 		car.forward();
  	}
  	if(data=='x|1')
  	{
- 		console.log('down');
+ 		car.back();
  	}
 })
