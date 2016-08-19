@@ -1,0 +1,5 @@
+2016/8/19 上传node_v0.10.42-1_ramips_24kec.ipk到wrtnode，nodejs目录下准备安装nodejs
+opkg install node_v0.10.42-1_ramips_24kec.ipk报错缺少几个相关文件
+折腾了几次包括把/etc/opkg.conf文件增加了源，可能源地址不对。于是从新覆盖opkg.conf和opkg文件夹
+从新opkg update就可以安装了
+安装在/nodejs下
