@@ -1,0 +1,2 @@
+安装只要把mcsjs考到当前目录下，nmp install mcsjs
+必须把nodemodule下的api.js更改网址为https://api.mediatek.cn/
