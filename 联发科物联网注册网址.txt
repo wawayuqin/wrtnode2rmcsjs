@@ -1,0 +1,1 @@
+http://mcs.mediatek.cn/oauth/login
